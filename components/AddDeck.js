@@ -24,6 +24,7 @@ class AddDeckForm extends React.Component {
     const newDeck = { id, value, questions: {} };
 
     saveDeck(newDeck).then(() => {
+      console.log(newDeck);
       dispatch(addDeck(newDeck));
       this.setState({ value: "" });
       navigation.navigate("DeckDetail", { deckId: id });

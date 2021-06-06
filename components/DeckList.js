@@ -9,7 +9,7 @@ class DeckList extends React.Component {
   componentDidMount() {
     getDecks().then(results => {
       const decks = JSON.parse(results) || {};
-
+      console.log(decks);
       this.props.dispatch(recieveDecks(decks));
     });
   }
@@ -46,7 +46,7 @@ class DeckList extends React.Component {
                     backgroundColor: "#6495ED"
                   }}
                 >
-                  <Text style={{ color: "white" }}>{deck[id].title}</Text>
+                  <Text style={{ color: "white" }}>{deck[id].value}</Text>
                 </CardItem>
                 <CardItem style={{ backgroundColor: "#6495ED" }}>
                   <Body style={{ alignItems: "center" }}>

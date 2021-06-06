@@ -5,7 +5,7 @@ import { Button , Toast } from "native-base";
 import { clearLocalNotification, setLocalNotification } from "../utils/helper";
 
 function Deck({ deck, navigation }) {
-  const { id, title, questions } = deck;
+  const { id, value, questions } = deck;
 
   const visitAddCardForm = () => {
     navigation.navigate("AddCardForm", { deckId: id });
@@ -15,7 +15,7 @@ function Deck({ deck, navigation }) {
     let length =  Object.keys(questions).length
     if (length === 0) {
       Toast.show({
-        text: "Please Add Card or quiz",
+        text: "Please Add Card",
         buttonText: "Okay"
       });
     } else {
@@ -26,7 +26,7 @@ function Deck({ deck, navigation }) {
 
   return (
     <View style={styles.center}>
-      <Text style={styles.headerText}>{title}</Text>
+      <Text style={styles.headerText}>{value}</Text>
       <Text style={styles.cardCount}>
         {Object.keys(questions).length} Cards
       </Text>
@@ -58,8 +58,9 @@ const styles = StyleSheet.create({
   button: {
     justifyContent: "center",
     alignItems: "center",
+    padding:40,
+    marginLeft:40,
     marginTop: 20,
-    padding: 40,
     borderRadius: 10,
     backgroundColor: "#0f4c75"
   },

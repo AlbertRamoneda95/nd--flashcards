@@ -69,7 +69,8 @@ class Card extends React.Component {
 const styles = StyleSheet.create({
   center: {
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    marginLeft:20
   },
   questionText: {
     color: "#0f4c75",
@@ -81,8 +82,6 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
   button: {
-    justifyContent: "center",
-    alignItems: "center",
     marginTop: 20,
     padding: 20,
     borderRadius: 10,

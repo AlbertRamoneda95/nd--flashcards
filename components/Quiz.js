@@ -63,7 +63,8 @@ class Quiz extends React.Component {
 const styles = StyleSheet.create({
   center: {
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    marginLeft:20
   },
   button: {
     justifyContent: "center",

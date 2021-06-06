@@ -3,6 +3,8 @@ import { AsyncStorage } from 'react-native';
 export const DECKS_ITEM_KEY = 'DECKS';
 
 export function getDecks() {
+  var res = AsyncStorage.getItem(DECKS_ITEM_KEY)
+  console.log(res);
   return AsyncStorage.getItem(DECKS_ITEM_KEY);
 };
 

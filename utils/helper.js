@@ -1,4 +1,4 @@
-import uuid from 'uuid/v1';
+import uuid from 'react-native-uuid';
 import { AsyncStorage } from 'react-native';
 import { Notifications } from 'expo';
 import * as Permissions from 'expo-permissions';
@@ -6,7 +6,7 @@ import * as Permissions from 'expo-permissions';
 const NOTIFICATION_KEY = 'reactnd-flashcard:notifications';
 
 export function createId() {
-  return uuid();
+  return uuid.v4();
 };
 
 export function clearLocalNotification() {
