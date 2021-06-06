@@ -6,7 +6,7 @@ import { addDeck } from "../actions";
 import {
   StyleSheet
 } from "react-native";
-import { Container, Toast, Item,Text,Button, Input } from "native-base";
+import { Container, Item,Text,Button, Input } from "native-base";
 
 class AddDeckForm extends React.Component {
   state = {
